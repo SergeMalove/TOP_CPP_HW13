@@ -9,85 +9,12 @@
 в виде .cpp файла или ссылки на гитхаб.
 */
 #include <iostream>
-
-class Weapon {
-public:
-    virtual void shoot() = 0;
-    virtual void reload() = 0;
-    virtual void hit() = 0;
-};
-
-class Bazooka : public Weapon {
-public:
-    void shoot() override {
-        std::cout << "PAAAAAAF!!!\n";
-    }
-    void reload() override {
-        std::cout << "Bazooka reloaded!!!\n";
-    }
-    void hit() override {
-        std::cout << "Hit by Bazooka!!!\n";
-    }
-};
-
-class Pistole : public Weapon {
-public:
-    void shoot() override {
-        std::cout << "paf!\n";
-    }
-    void reload() override {
-        std::cout << "Pistole reloaded!!!\n";
-    }
-    void hit() override {
-        std::cout << "Hit by Pistol!!!\n";
-    }
-};
-
-class MachineGun : public Weapon {
-public:
-    void shoot() override {
-        std::cout << "paf! paf! paf!\n";
-    }
-    void reload() override {
-        std::cout << "MachineGun reloaded!!!\n";
-    }
-    void hit() override {
-        std::cout << "Hit by MachineGun!!!\n";
-    }
-};
-
-class PlazmaDildo : public Weapon {
-public:
-    void shoot() override {
-        std::cout << "Bum! Bum! Bum!\n";
-    }
-    void reload() override {
-        std::cout << "PlazmaDildo reloaded!!!\n";
-    }
-    void hit() override {
-        std::cout << "Hit by PlazmaDildo!!!\n";
-    }
-};
-
-class Player {
-private:
-    Weapon* weapon_;
-public:
-    Player(Weapon* weapon) : weapon_(weapon) {}
-
-    void shootByWeapon() {
-        weapon_->shoot();
-    }
-    void changeWeapon(Weapon* newWeapon) {
-        weapon_ = newWeapon;
-    }
-    void reloadWeapon() {
-        weapon_->reload();
-    }
-    void hitByWeapon() {
-        weapon_->hit();
-    }
-};
+#include "Weapon.h"
+#include "Bazooka.h"
+#include "Pistole.h"
+#include "MachineGun.h"
+#include "PlazmaDildo.h"
+#include "Player.h"
 
 int main()
 {

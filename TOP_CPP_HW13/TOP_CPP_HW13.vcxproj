@@ -127,7 +127,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Bazooka.cpp" />
+    <ClCompile Include="MachineGun.cpp" />
+    <ClCompile Include="Pistole.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="PlazmaDildo.cpp" />
     <ClCompile Include="TOP_CPP_HW13.cpp" />
+    <ClCompile Include="Weapon.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Bazooka.h" />
+    <ClInclude Include="MachineGun.h" />
+    <ClInclude Include="Pistole.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="PlazmaDildo.h" />
+    <ClInclude Include="Weapon.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
